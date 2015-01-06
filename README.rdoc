@@ -1,15 +1,25 @@
 = Redmine Checkout plugin
 
-Original Author: Holger Just
-Original URL: http://dev.holgerjust.de/projects/redmine-checkout
+This Redmine plugin adds a link to the repository to the GUI.
 
-This plugin to Redmine adds a link to the actual repository to the GUI.
+It includes ZeroClipboard[http://code.google.com/p/zeroclipboard/] by Joseph Huckaby.
 
-This plugin includes ZeroClipboard[http://code.google.com/p/zeroclipboard/]
-by Joseph Huckaby. This software is licensed under the
-{GNU Lesser General Public License}[http://www.gnu.org/licenses/lgpl.html].
+== Installation
+
+This plugin targets Redmine 2.1:
+
+1. Copy the software to the <tt>plugins</tt> directory. Make sure that the name
+   of the directory is <tt>redmine_checkout</tt>.
+2. Go to the <tt>redmine_checkout</tt> directory and run <tt>bundle install</tt> to install (almost) all the dependencies.
+3. Install the <tt>redmine_plugin_support</tt> gem (the missing dependency).
+4. Run <tt>rake redmine:plugins:migrate RAILS_ENV=production</tt> at Rails' root directory.
+5. Restart Redmine.
+
+== License
 
 Copyright (c) 2009, 2010 Holger Just
+
+This software is licensed under the {GNU Lesser General Public License}[http://www.gnu.org/licenses/lgpl.html].
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -31,14 +41,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-
-= Installation
-
-This plugin targets Redmine 2.1:
-
-1. Copy the software to the <tt>plugins</tt> directory. Make sure that the name
-   of the directory is <tt>redmine_checkout</tt>.
-2. Go to the <tt>redmine_checkout</tt> directory and run <tt>bundle install</tt> to install (almost) all the dependencies.
-3. Install the <tt>redmine_plugin_support</tt> gem (the missing dependency).
-4. Run <tt>rake redmine:plugins:migrate RAILS_ENV=production</tt> at Rails' root directory.
-5. Restart Redmine.
