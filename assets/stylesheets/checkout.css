@@ -14,13 +14,6 @@ table.checkout_protocol_table td.protocol_display_login {
 
 .icon-changeset { background-image: url(../../../images/changeset.png);}
 
-.repository-info {
-  background-color: #eee;
-  border: 1px solid #E4E4E4;
-  padding: 0 10px;
-  margin: 4px 0 10px;
-}
-
 .bottomline {
   border-bottom: 1px solid #ccc;
 }
@@ -45,7 +38,7 @@ table.checkout_protocol_table td.protocol_display_login {
 
 #checkout_protocols li:first-child a {
   border-left-width: 1px;
-  
+
   /* Standard, Opera 10, IE 9 */
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -69,11 +62,11 @@ table.checkout_protocol_table td.protocol_display_login {
   background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));   /* Webkit (Chrome, Safari, ...) */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#dddddd'); /* IE 5.5 - 7 */
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#dddddd'); /* IE 8 */
-  
+
   border-color: #bbb;
   border-style: solid;
   border-width: 1px 1px 1px 0;
-  
+
   color: #333;
   display: block;
   font-size: 11px;
@@ -95,7 +88,7 @@ table.checkout_protocol_table td.protocol_display_login {
   background: -webkit-gradient(linear, left top, left bottom, from(#759fcf), to(#507AAA)); /* Webkit (Chrome, Safari, ...) */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#759fcf', endColorstr='#507AAA'); /* IE 5.5 - IE 7 */
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#759fcf', endColorstr='#507AAA'); /* IE 8 */
-  
+
   color: #fff;
   text-shadow: -1px -1px 0 rgba(0,0,0,0.4);
   border-top-color: #759fcf;
@@ -111,7 +104,7 @@ table.checkout_protocol_table td.protocol_display_login {
   background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#aaa));  /* Webkit (Chrome, Safari, ...) */
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#aaaaaa'); /* IE 5.5 - IE 7 */
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#aaaaaa'); /* IE 8 */
-  
+
   color: #000;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
   border-color: #bbb;
@@ -154,7 +147,7 @@ span#checkout_access {
   padding: 0;
   border-width: 1px;
   text-align: center;
-  
+
   border-radius: 5px; /* Standard, Opera 10, IE 9 */
   -khtml-border-radius: 3px; /* Konquerer */
   -moz-border-radius: 3px ; /* Gecko (Firefox, ...) */
