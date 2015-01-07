@@ -6,14 +6,13 @@ It includes ZeroClipboard[http://code.google.com/p/zeroclipboard/] by Joseph Huc
 
 == Installation
 
-This plugin targets Redmine 2.1:
+This plugin targets Redmine 2.6:
 
 1. Copy the software to the <tt>plugins</tt> directory. Make sure that the name
    of the directory is <tt>redmine_checkout</tt>.
-2. Go to the <tt>redmine_checkout</tt> directory and run <tt>bundle install</tt> to install (almost) all the dependencies.
-3. Install the <tt>redmine_plugin_support</tt> gem (the missing dependency).
-4. Run <tt>rake redmine:plugins:migrate RAILS_ENV=production</tt> at Rails' root directory.
-5. Restart Redmine.
+2. Go to the <tt>redmine_checkout</tt> directory and run <tt>bundle install</tt> to install all the dependencies.
+3. Run <tt>rake redmine:plugins:migrate RAILS_ENV=production</tt> at Rails' root directory.
+4. Restart Redmine.
 
 == License
 

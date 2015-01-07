@@ -19,13 +19,13 @@ require 'checkout/view_helper'
 
 Redmine::Plugin.register :redmine_checkout do
   name 'Redmine Checkout plugin'
-  url 'https://github.com/hanjos/redmine_checkout'
+  url 'https://github.com/lpirl/redmine_checkout'
   author 'Holger Just et al.'
   author_url 'http://meine-er.de'
   description 'Add links to the actual repository to the repository view.'
   version '0.6-BETA'
 
-  requires_redmine :version_or_higher => '2.0.3'
+  requires_redmine :version_or_higher => '2.6.0'
 
   settings_defaults = HashWithIndifferentAccess.new({
     'use_zero_clipboard' => '1',

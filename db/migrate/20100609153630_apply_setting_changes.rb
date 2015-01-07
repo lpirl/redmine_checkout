@@ -22,21 +22,16 @@ class ApplySettingChanges < ActiveRecord::Migration
     Repository.all.each do |r|
       allow_subtree_checkout = ['Cvs', 'Subversion'].include? r.type.demodulize
 
-      protocol = case r.checkout_settings['checkout_url_type']
-      when 'none', 'generated'
-        nil
-      when 'original', 'overwritten'
-        HashWithIndifferentAccess.new({ "0" => HashWithIndifferentAccess.new({
-          :protocol => r.type.demodulize,
-          :command => Setting.plugin_redmine_checkout["checkout_cmd_#{r.type.demodulize}"] || default_commands[r.type.demodulize],
-          :regex => "",
-          :regex_replacement => "",
-          :fixed_url => (r.checkout_settings['checkout_url_type'] == 'original' ? (r.url || "") : r.checkout_settings["checkout_url"]),
-          :access => 'permission',
-          :append_path => (allow_subtree_checkout ? '1' : '0'),
-          :is_default => '1'})
-        })
-      end
+      protocol = HashWithIndifferentAccess.new({ "0" => HashWithIndifferentAccess.new({
+        :protocol => r.type.demodulize,
+        :command => Setting.plugin_redmine_checkout["checkout_cmd_#{r.type.demodulize}"] || default_commands[r.type.demodulize],
+        :regex => "",
+        :regex_replacement => "",
+        :fixed_url => (r.checkout_settings['checkout_url_type'] == 'original' ? (r.url || "") : r.checkout_settings["checkout_url"]),
+        :access => 'permission',
+        :append_path => (allow_subtree_checkout ? '1' : '0'),
+        :is_default => '1'})
+      })
 
       r.checkout_settings = Hash.new({
         'checkout_protocols' => protocol,
